@@ -15,7 +15,14 @@ class AddTableCivilizations extends Migration
     {
         //
         Schema::create('civilizations', function (Blueprint $table) {
-
+            $table->increments('id');
+            $table->string('name', 255)->nullable();
+            $table->string('image', 255)->nullable();
+            $table->string('flag', 255)->nullable();
+            $table->text('attribute')->nullable();
+            $table->integer('commander_start')->nullable();
+            $table->string('special_unit')->nullable();
+            $table->timestamps();
         });
     }
 
