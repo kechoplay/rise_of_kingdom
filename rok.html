@@ -1,255 +1,176 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>ROK</title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>StellarNav.js - A Powerful Responsive Navigation</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400" rel="stylesheet">
+    <!-- required -->
+    <link rel="stylesheet" type="text/css" media="all" href="/rise_of_kingdom/public/css/stellarnav.css">
+    <!-- required -->
     <style>
-        .main-container {
-            width: 100%;
-            margin: 0 auto;
-            clear: both;
-            display: block;
+        /* styles for this sample only */
+        * {
+            margin: 0;
+            padding: 0;
         }
 
-        .container-header {
-            width: 100%;
-            float: left;
-            position: relative;
-            min-width: 100%;
-            -webkit-box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .04), 0px 20px 250px 0px rgba(9, 30, 66, .04);
-            box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .04), 0px 20px 250px 0px rgba(9, 30, 66, .04);
-            margin-top: 0;
-            margin-bottom: 0;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            border: none;
-            background: #ffffff;
-        }
-
-        .navbar {
-            margin-bottom: 0;
-            background: #ffffff;
-            border: none;
-        }
-
-        .navbar-default .navbar-nav li a {
-            font-weight: 600 !important;
-            font-family: 'Roboto', Helvetica, Arial, sans-serif;
-            color: #091e42;
+        body {
             font-size: 16px;
-            text-align: left;
+            font-family: 'Exo 2', sans-serif;
+            background: #efefef;
+            color: #555;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .header a {
+            padding: 30px 0 0;
+            display: block;
+            font-size: 48px;
             text-decoration: none;
-            padding: 18px 20px;
-            -webkit-transition: none;
-            transition: none;
-            white-space: normal;
+            color: #555;
         }
 
-        .navbar-default ul li {
-            line-height: 24px;
-            position: relative;
-            -webkit-transition: all .25s linear;
-            transition: all .25s linear;
+        .header p {
+            margin: 10px 0 40px 0;
+            font-size: 18px;
         }
 
-        .navbar-collapse ul {
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .dropdown-menu {
-            width: 190px;
-            color: #555;
-            position: absolute;
-            border-top: 1px solid rgba(0, 0, 0, .05);
-            -webkit-box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .06);
-            box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .06);
-            z-index: 400;
+        @media only screen and (max-width: 1000px) {
+            .stellarnav > ul > li > a {
+                padding: 20px 23px;
+            }
         }
 
-        .dropdown-menu > li > a {
-            padding: 10px 18px !important;
-        }
-
-        .navbar-default ul ul li {
-            padding: 0;
-            width: 100%;
-            border-bottom: 1px solid rgba(0, 0, 0, .05);
-        }
-
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu > .dropdown-menu {
-            top: 0;
-            left: 100% !important;
-            border-radius: 0;
-        }
-
-        .item-guide:hover > .dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-submenu:hover > .dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-menu {
-            right: 0;
-            left: 0 !important;
-            padding: 0;
-            border-radius: 0;
-        }
-
-        .item-guide > a:after {
-            display: block;
-            content: "\f078";
-            float: right;
-            width: 0;
-            height: 0;
-            border-color: transparent;
-            border-style: solid;
-            border-width: 5px 0 5px 5px;
-            border-left-color: #ccc;
-            margin-top: 5px;
-            margin-right: -10px;
-        }
-
-        .dropdown-submenu:hover > a:after {
-            border-left-color: #fff;
-        }
-
-        .dropdown-submenu.pull-left {
-            float: none;
-        }
-
-        .dropdown-submenu.pull-left > .dropdown-menu {
-            left: -100%;
-            margin-left: 10px;
-            -webkit-border-radius: 6px 0 6px 6px;
-            -moz-border-radius: 6px 0 6px 6px;
-            border-radius: 6px 0 6px 6px;
-        }
+        /* styles for this sample only */
     </style>
-</head>
-<body>
-<div class="main-container">
-    <div class="container-header">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Brand</a>
-                </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Link</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown dropdown-submenu">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Separated link</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
+</head>
+
+<body>
+<div class="stellarnav">
+    <ul>
+        <li><a href="">Dropdown</a>
+            <ul>
+                <li><a href="#">How deep?</a>
+                    <ul>
+                        <li><a href="#">Deep</a>
+                            <ul>
+                                <li><a href="#">Even deeper</a>
+                                    <ul>
+                                        <li><a href="#">Item</a></li>
+                                        <li><a href="#">Item</a></li>
+                                        <li><a href="#">Item</a></li>
                                     </ul>
                                 </li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
                             </ul>
                         </li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-<!--        <nav class="navbar navbar-default" role="navigation">-->
-<!--            &lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
-<!--            <div class="container">-->
-<!--                <div class="navbar-header">-->
-<!--                    <button type="button" class="navbar-toggle" data-toggle="collapse"-->
-<!--                            data-target=".navbar-ex1-collapse">-->
-<!--                        <span class="sr-only">Toggle navigation</span>-->
-<!--                        <span class="icon-bar"></span>-->
-<!--                        <span class="icon-bar"></span>-->
-<!--                        <span class="icon-bar"></span>-->
-<!--                    </button>-->
-<!--                    <a class="navbar-brand" href="/">-->
-<!--                        <img class=" lazyloaded"-->
-<!--                             src="https://rok.guide/wp-content/uploads/2019/03/rise-of-kingdoms-logo.png"-->
-<!--                             data-src="https://rok.guide/wp-content/uploads/2019/03/rise-of-kingdoms-logo.png"-->
-<!--                             alt="Rise of Kingdoms">-->
-<!--                    </a>-->
-<!--                </div>-->
+                </li>
+                <li><a href="#">Item</a>
+                    <ul>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Item</a>
+                    <ul>
+                        <li><a href="#">Deeper</a>
+                            <ul>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Here's a very long item.</a>
+                    <ul>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
 
-<!--                &lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
-<!--                <div class="collapse navbar-collapse navbar-ex1-collapse">-->
-<!--                    <ul class="nav navbar-nav navbar-right">-->
-<!--                        <li><a href="#">Home</a></li>-->
-<!--                        <li class="item-guide">-->
-<!--                            <a href="#" class="dropdown-toggle">Basic</a>-->
-<!--                            <ul class="dropdown-menu">-->
-<!--                                <li><a href="#">Beginner’s Guide</a></li>-->
-<!--                                <li><a href="#">Civilizations</a></li>-->
-<!--                                <li class="dropdown-submenu">-->
-<!--                                    <a class="test" tabindex="-1" href="#">New dropdown</a>-->
-<!--                                    <ul class="dropdown-menu">-->
-<!--                                        <li><a tabindex="-1" href="#">2nd level dropdown</a></li>-->
-<!--                                        <li><a tabindex="-1" href="#">2nd level dropdown</a></li>-->
-<!--                                        <li class="dropdown-submenu">-->
-<!--                                            <a class="test" href="#">Another dropdown <i class="fa fa-plus"></i></a>-->
-<!--                                            <ul class="dropdown-menu">-->
-<!--                                                <li><a href="#">3rd level dropdown</a></li>-->
-<!--                                                <li><a href="#">3rd level dropdown</a></li>-->
-<!--                                            </ul>-->
-<!--                                        </li>-->
-<!--                                    </ul>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li><a href="#">Talent Builds</a></li>-->
-<!--                        <li><a href="#">Tier List</a></li>-->
-<!--                        <li><a href="#">Gift Codes</a></li>-->
-<!--                        <li><a href="#">Recruitment</a></li>-->
-<!--                        <li><a href="#"><i class="fa fa-download"></i> Download for PC</a></li>-->
-<!--                    </ul>-->
-<!--                </div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
-<!--            </div>-->
-<!--        </nav>-->
-    </div>
-</div>
-<script>
-    (function ($) {
-        $(document).ready(function () {
-            $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function (event) {
-                event.preventDefault();
-                event.stopPropagation();
-                $(this).parent().siblings().removeClass('open');
-                $(this).parent().toggleClass('open');
-            });
+        <li><a href="">Item 2</a></li>
+        <li><a href="">Item 3</a></li>
+        <li><a href="">Item 4</a></li>
+        <li><a href="">Item 5</a></li>
+        <li><a href="">Item 6</a></li>
+        <li class="drop-left"><a href="">Drop Left</a>
+            <ul>
+                <li><a href="#">How deep?</a>
+                    <ul>
+                        <li><a href="#">Deep</a>
+                            <ul>
+                                <li><a href="#">Even deeper</a>
+                                    <ul>
+                                        <li><a href="#">Item</a></li>
+                                        <li><a href="#">Item</a></li>
+                                        <li><a href="#">Item</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </li>
+    </ul>
+</div><!-- .stellarnav -->
+
+<!-- required -->
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script type="text/javascript" src="/rise_of_kingdom/public/js/stellarnav.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        jQuery('.stellarnav').stellarNav({
+            theme: 'dark',
+            breakpoint: 960,
+            position: 'right',
+            showArrows: true,
+            phoneBtn: '18009997788',
+            locationBtn: 'https://www.google.com/maps'
         });
-    })(jQuery);
+    });
 </script>
+<!-- required -->
+
+<script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
 </body>
 </html>
