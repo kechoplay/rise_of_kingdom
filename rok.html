@@ -19,7 +19,6 @@
         body {
             font-size: 16px;
             font-family: 'Exo 2', sans-serif;
-            background: #efefef;
             color: #555;
         }
 
@@ -45,6 +44,24 @@
             margin: 0 auto;
         }
 
+        .container-header {
+            padding: 20px 0;
+            -webkit-box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .04), 0px 20px 250px 0px rgba(9, 30, 66, .04);
+            box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .04), 0px 20px 250px 0px rgba(9, 30, 66, .04);
+            background: #ffffff;
+        }
+
+        .stellarnav > ul li ul {
+            color: #555;
+            border: 1px solid rgba(0, 0, 0, .09);
+            -webkit-box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .06);
+            box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .06);
+        }
+
+        .stellarnav > ul li ul li {
+            border-bottom: 1px solid rgba(0, 0, 0, .09);
+        }
+
         @media only screen and (max-width: 1000px) {
             .stellarnav > ul > li > a {
                 padding: 20px 23px;
@@ -57,102 +74,110 @@
 </head>
 
 <body>
-<div class="stellarnav">
-    <ul>
-        <li><a href="">Dropdown</a>
-            <ul>
-                <li><a href="#">How deep?</a>
-                    <ul>
-                        <li><a href="#">Deep</a>
-                            <ul>
-                                <li><a href="#">Even deeper</a>
-                                    <ul>
-                                        <li><a href="#">Item</a></li>
-                                        <li><a href="#">Item</a></li>
-                                        <li><a href="#">Item</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Item</a>
-                    <ul>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Item</a>
-                    <ul>
-                        <li><a href="#">Deeper</a>
-                            <ul>
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Here's a very long item.</a>
-                    <ul>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-
-        <li><a href="">Item 2</a></li>
-        <li><a href="">Item 3</a></li>
-        <li><a href="">Item 4</a></li>
-        <li><a href="">Item 5</a></li>
-        <li><a href="">Item 6</a></li>
-        <li class="drop-left"><a href="">Drop Left</a>
-            <ul>
-                <li><a href="#">How deep?</a>
-                    <ul>
-                        <li><a href="#">Deep</a>
-                            <ul>
-                                <li><a href="#">Even deeper</a>
-                                    <ul>
-                                        <li><a href="#">Item</a></li>
-                                        <li><a href="#">Item</a></li>
-                                        <li><a href="#">Item</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-            </ul>
-        </li>
-    </ul>
-</div><!-- .stellarnav -->
+<div class="container-header">
+    <div class="stellarnav">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Guides</a>
+                <ul>
+                    <li><a href="#">Beginner’s Guide</a></li>
+                    <li><a href="#">Alliance</a></li>
+                    <li><a href="#">Ark of Osiris</a></li>
+                    <li><a href="#">Civilizations</a></li>
+                    <li><a href="#">Commanders</a>
+                        <ul>
+                            <li><a href="#">Legendary</a>
+                                <ul>
+                                    <li><a href="#">Aethelflaed</a></li>
+                                    <li><a href="#">Alexander The Great</a></li>
+                                    <li><a href="#">Artemisia I</a></li>
+                                    <li><a href="#">Attila</a></li>
+                                    <li><a href="#">Cao Cao</a></li>
+                                    <li><a href="#">Charlemagne</a></li>
+                                    <li><a href="#">Charles Martel</a></li>
+                                    <li><a href="#">Constantine</a></li>
+                                    <li><a href="#">Edward</a></li>
+                                    <li><a href="#">El Cid</a></li>
+                                    <li><a href="#">Frederick I</a></li>
+                                    <li><a href="#">Genghis Khan</a></li>
+                                    <li><a href="#">Guan Yu</a></li>
+                                    <li><a href="#">Hannibal Barca</a></li>
+                                    <li><a href="#">Ishida Mitsunari Guide</a></li>
+                                    <li><a href="#">Julius Caesar</a></li>
+                                    <li><a href="#">Leonidas</a></li>
+                                    <li><a href="#">Mehmed II</a></li>
+                                    <li><a href="#">Minamoto no Yoshitsune</a></li>
+                                    <li><a href="#">Ramesses II & Why He is Great for F2P Players!</a></li>
+                                    <li><a href="#">Richard I</a></li>
+                                    <li><a href="#">Saladin</a></li>
+                                    <li><a href="#">Seondeok</a></li>
+                                    <li><a href="#">Takeda Shingen</a></li>
+                                    <li><a href="#">Theodora</a></li>
+                                    <li><a href="#">Tomyris</a></li>
+                                    <li><a href="#">Yi-Seong-Gye</a></li>
+                                    <li><a href="#">Wu Zetain</a></li>
+                                    <li><a href="#">Yi Sun-sin</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Epic</a>
+                                <ul>
+                                    <li><a href="#">Baibars</a></li>
+                                    <li><a href="#">Belisarius</a></li>
+                                    <li><a href="#">Boudica</a></li>
+                                    <li><a href="#">Hermann</a></li>
+                                    <li><a href="#">Joan of Arc</a></li>
+                                    <li><a href="#">Keira</a></li>
+                                    <li><a href="#">Kusunoki Massashige</a></li>
+                                    <li><a href="#">Lohar</a></li>
+                                    <li><a href="#">Osman</a></li>
+                                    <li><a href="#">Pelagius</a></li>
+                                    <li><a href="#">Scipio Africanus</a></li>
+                                    <li><a href="#">Sun Tzu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Commander Pairings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Database</a>
+                        <ul>
+                            <li><a href="#">Flag Building Costs (KvK)</a></li>
+                            <li><a href="#">KvK Structures: Honor & Buff</a></li>
+                            <li><a href="#">Items</a></li>
+                            <li><a href="#">Skill Upgrade Costs</a></li>
+                            <li><a href="#">Starlight Requirements</a></li>
+                            <li><a href="#">Super-Value Bundles</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Equipment Guide</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Expedition</a></li>
+                    <li><a href="#">Farming Guide</a></li>
+                    <li><a href="#">KvK Lost Kingdom</a></li>
+                    <li><a href="#">Peerless Scholar</a></li>
+                    <li><a href="#">Troops</a>
+                        <ul>
+                            <li><a href="#">Infantry Troops</a></li>
+                            <li><a href="#">Archer Troops</a></li>
+                            <li><a href="#">Cavalry Troops</a></li>
+                            <li><a href="#">Siege Troops</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Buildings</a></li>
+                </ul>
+            </li>
+            <li><a href="">Talent Builds</a></li>
+            <li><a href="">Tier List</a></li>
+            <li><a href="">Gift Codes</a></li>
+            <li><a href="">Recruitment</a></li>
+            <li>
+                <a href="https://rok.guide/download/" style="color: #00700a">
+                    <i class="fa fa-download"></i>
+                    Download for PC
+                </a>
+            </li>
+        </ul>
+    </div><!-- .stellarnav -->
+</div>
 
 <!-- required -->
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
@@ -160,7 +185,7 @@
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         jQuery('.stellarnav').stellarNav({
-            theme: 'dark',
+            theme: 'light',
             breakpoint: 960,
             position: 'right',
             showArrows: true,
