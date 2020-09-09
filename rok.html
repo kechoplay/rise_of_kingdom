@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>StellarNav.js - A Powerful Responsive Navigation</title>
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- required -->
     <link rel="stylesheet" type="text/css" media="all" href="/rise_of_kingdom/public/css/stellarnav.css">
     <!-- required -->
@@ -62,6 +63,11 @@
             border-bottom: 1px solid rgba(0, 0, 0, .09);
         }
 
+        .has-sub a {
+            padding: 20px 40px !important;
+            padding-left: 15px!important;
+        }
+
         @media only screen and (max-width: 1000px) {
             .stellarnav > ul > li > a {
                 padding: 20px 23px;
@@ -78,15 +84,15 @@
     <div class="stellarnav">
         <ul>
             <li><a href="">Home</a></li>
-            <li><a href="">Guides</a>
+            <li class="menu-item-has-children"><a href="">Guides <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                 <ul>
                     <li><a href="#">Beginner’s Guide</a></li>
                     <li><a href="#">Alliance</a></li>
                     <li><a href="#">Ark of Osiris</a></li>
                     <li><a href="#">Civilizations</a></li>
-                    <li><a href="#">Commanders</a>
+                    <li><a href="#">Commanders <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                         <ul>
-                            <li><a href="#">Legendary</a>
+                            <li><a href="#">Legendary <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                                 <ul>
                                     <li><a href="#">Aethelflaed</a></li>
                                     <li><a href="#">Alexander The Great</a></li>
@@ -119,7 +125,7 @@
                                     <li><a href="#">Yi Sun-sin</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Epic</a>
+                            <li><a href="#">Epic <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                                 <ul>
                                     <li><a href="#">Baibars</a></li>
                                     <li><a href="#">Belisarius</a></li>
@@ -138,7 +144,7 @@
                             <li><a href="#">Commander Pairings</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Database</a>
+                    <li><a href="#">Database <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                         <ul>
                             <li><a href="#">Flag Building Costs (KvK)</a></li>
                             <li><a href="#">KvK Structures: Honor & Buff</a></li>
@@ -154,7 +160,7 @@
                     <li><a href="#">Farming Guide</a></li>
                     <li><a href="#">KvK Lost Kingdom</a></li>
                     <li><a href="#">Peerless Scholar</a></li>
-                    <li><a href="#">Troops</a>
+                    <li><a href="#">Troops <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                         <ul>
                             <li><a href="#">Infantry Troops</a></li>
                             <li><a href="#">Archer Troops</a></li>
@@ -188,7 +194,7 @@
             theme: 'light',
             breakpoint: 960,
             position: 'right',
-            showArrows: true,
+            showArrows: false,
             phoneBtn: '18009997788',
             locationBtn: 'https://www.google.com/maps'
         });
