@@ -4,194 +4,1986 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>StellarNav.js - A Powerful Responsive Navigation</title>
+    <title>Rok VietNam</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- required -->
     <link rel="stylesheet" type="text/css" media="all" href="/rise_of_kingdom/public/css/stellarnav.css">
     <!-- required -->
-    <style>
-        /* styles for this sample only */
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-size: 16px;
-            font-family: 'Exo 2', sans-serif;
-            color: #555;
-        }
-
-        .header {
-            text-align: center;
-        }
-
-        .header a {
-            padding: 30px 0 0;
-            display: block;
-            font-size: 48px;
-            text-decoration: none;
-            color: #555;
-        }
-
-        .header p {
-            margin: 10px 0 40px 0;
-            font-size: 18px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .container-header {
-            padding: 20px 0;
-            -webkit-box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .04), 0px 20px 250px 0px rgba(9, 30, 66, .04);
-            box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .04), 0px 20px 250px 0px rgba(9, 30, 66, .04);
-            background: #ffffff;
-        }
-
-        .stellarnav > ul li ul {
-            color: #555;
-            border: 1px solid rgba(0, 0, 0, .09);
-            -webkit-box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .06);
-            box-shadow: 0px 10px 20px 0px rgba(9, 30, 66, .06);
-        }
-
-        .stellarnav > ul li ul li {
-            border-bottom: 1px solid rgba(0, 0, 0, .09);
-        }
-
-        .has-sub a {
-            padding: 20px 40px !important;
-            padding-left: 15px!important;
-        }
-
-        @media only screen and (max-width: 1000px) {
-            .stellarnav > ul > li > a {
-                padding: 20px 23px;
-            }
-        }
-
-        /* styles for this sample only */
-    </style>
-
+    <link rel="stylesheet" type="text/css" media="all" href="/rise_of_kingdom/public/css/rok.css">
 </head>
 
 <body>
-<div class="container-header">
-    <div class="stellarnav">
-        <ul>
-            <li><a href="">Home</a></li>
-            <li class="menu-item-has-children"><a href="">Guides <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                <ul>
-                    <li><a href="#">Beginner’s Guide</a></li>
-                    <li><a href="#">Alliance</a></li>
-                    <li><a href="#">Ark of Osiris</a></li>
-                    <li><a href="#">Civilizations</a></li>
-                    <li><a href="#">Commanders <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                        <ul>
-                            <li><a href="#">Legendary <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                                <ul>
-                                    <li><a href="#">Aethelflaed</a></li>
-                                    <li><a href="#">Alexander The Great</a></li>
-                                    <li><a href="#">Artemisia I</a></li>
-                                    <li><a href="#">Attila</a></li>
-                                    <li><a href="#">Cao Cao</a></li>
-                                    <li><a href="#">Charlemagne</a></li>
-                                    <li><a href="#">Charles Martel</a></li>
-                                    <li><a href="#">Constantine</a></li>
-                                    <li><a href="#">Edward</a></li>
-                                    <li><a href="#">El Cid</a></li>
-                                    <li><a href="#">Frederick I</a></li>
-                                    <li><a href="#">Genghis Khan</a></li>
-                                    <li><a href="#">Guan Yu</a></li>
-                                    <li><a href="#">Hannibal Barca</a></li>
-                                    <li><a href="#">Ishida Mitsunari Guide</a></li>
-                                    <li><a href="#">Julius Caesar</a></li>
-                                    <li><a href="#">Leonidas</a></li>
-                                    <li><a href="#">Mehmed II</a></li>
-                                    <li><a href="#">Minamoto no Yoshitsune</a></li>
-                                    <li><a href="#">Ramesses II & Why He is Great for F2P Players!</a></li>
-                                    <li><a href="#">Richard I</a></li>
-                                    <li><a href="#">Saladin</a></li>
-                                    <li><a href="#">Seondeok</a></li>
-                                    <li><a href="#">Takeda Shingen</a></li>
-                                    <li><a href="#">Theodora</a></li>
-                                    <li><a href="#">Tomyris</a></li>
-                                    <li><a href="#">Yi-Seong-Gye</a></li>
-                                    <li><a href="#">Wu Zetain</a></li>
-                                    <li><a href="#">Yi Sun-sin</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Epic <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                                <ul>
-                                    <li><a href="#">Baibars</a></li>
-                                    <li><a href="#">Belisarius</a></li>
-                                    <li><a href="#">Boudica</a></li>
-                                    <li><a href="#">Hermann</a></li>
-                                    <li><a href="#">Joan of Arc</a></li>
-                                    <li><a href="#">Keira</a></li>
-                                    <li><a href="#">Kusunoki Massashige</a></li>
-                                    <li><a href="#">Lohar</a></li>
-                                    <li><a href="#">Osman</a></li>
-                                    <li><a href="#">Pelagius</a></li>
-                                    <li><a href="#">Scipio Africanus</a></li>
-                                    <li><a href="#">Sun Tzu</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Commander Pairings</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Database <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                        <ul>
-                            <li><a href="#">Flag Building Costs (KvK)</a></li>
-                            <li><a href="#">KvK Structures: Honor & Buff</a></li>
-                            <li><a href="#">Items</a></li>
-                            <li><a href="#">Skill Upgrade Costs</a></li>
-                            <li><a href="#">Starlight Requirements</a></li>
-                            <li><a href="#">Super-Value Bundles</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Equipment Guide</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Expedition</a></li>
-                    <li><a href="#">Farming Guide</a></li>
-                    <li><a href="#">KvK Lost Kingdom</a></li>
-                    <li><a href="#">Peerless Scholar</a></li>
-                    <li><a href="#">Troops <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                        <ul>
-                            <li><a href="#">Infantry Troops</a></li>
-                            <li><a href="#">Archer Troops</a></li>
-                            <li><a href="#">Cavalry Troops</a></li>
-                            <li><a href="#">Siege Troops</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Buildings</a></li>
-                </ul>
-            </li>
-            <li><a href="">Talent Builds</a></li>
-            <li><a href="">Tier List</a></li>
-            <li><a href="">Gift Codes</a></li>
-            <li><a href="">Recruitment</a></li>
-            <li>
-                <a href="https://rok.guide/download/" style="color: #00700a">
-                    <i class="fa fa-download"></i>
-                    Download for PC
-                </a>
-            </li>
-        </ul>
-    </div><!-- .stellarnav -->
-</div>
+<div class="main-container">
+    <div class="container-header">
+        <div class="stellarnav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li class="menu-item-has-children"><a href="">Guides <i class="fa fa-chevron-down"
+                                                                        aria-hidden="true"></i></a>
+                    <ul>
+                        <li><a href="#">Beginner’s Guide</a></li>
+                        <li><a href="#">Alliance</a></li>
+                        <li><a href="#">Ark of Osiris</a></li>
+                        <li><a href="#">Civilizations</a></li>
+                        <li><a href="#">Commanders <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                            <ul>
+                                <li><a href="#">Legendary <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                    <ul>
+                                        <li><a href="#">Aethelflaed</a></li>
+                                        <li><a href="#">Alexander The Great</a></li>
+                                        <li><a href="#">Artemisia I</a></li>
+                                        <li><a href="#">Attila</a></li>
+                                        <li><a href="#">Cao Cao</a></li>
+                                        <li><a href="#">Charlemagne</a></li>
+                                        <li><a href="#">Charles Martel</a></li>
+                                        <li><a href="#">Constantine</a></li>
+                                        <li><a href="#">Edward</a></li>
+                                        <li><a href="#">El Cid</a></li>
+                                        <li><a href="#">Frederick I</a></li>
+                                        <li><a href="#">Genghis Khan</a></li>
+                                        <li><a href="#">Guan Yu</a></li>
+                                        <li><a href="#">Hannibal Barca</a></li>
+                                        <li><a href="#">Ishida Mitsunari Guide</a></li>
+                                        <li><a href="#">Julius Caesar</a></li>
+                                        <li><a href="#">Leonidas</a></li>
+                                        <li><a href="#">Mehmed II</a></li>
+                                        <li><a href="#">Minamoto no Yoshitsune</a></li>
+                                        <li><a href="#">Ramesses II & Why He is Great for F2P Players!</a></li>
+                                        <li><a href="#">Richard I</a></li>
+                                        <li><a href="#">Saladin</a></li>
+                                        <li><a href="#">Seondeok</a></li>
+                                        <li><a href="#">Takeda Shingen</a></li>
+                                        <li><a href="#">Theodora</a></li>
+                                        <li><a href="#">Tomyris</a></li>
+                                        <li><a href="#">Yi-Seong-Gye</a></li>
+                                        <li><a href="#">Wu Zetain</a></li>
+                                        <li><a href="#">Yi Sun-sin</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Epic <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                    <ul>
+                                        <li><a href="#">Baibars</a></li>
+                                        <li><a href="#">Belisarius</a></li>
+                                        <li><a href="#">Boudica</a></li>
+                                        <li><a href="#">Hermann</a></li>
+                                        <li><a href="#">Joan of Arc</a></li>
+                                        <li><a href="#">Keira</a></li>
+                                        <li><a href="#">Kusunoki Massashige</a></li>
+                                        <li><a href="#">Lohar</a></li>
+                                        <li><a href="#">Osman</a></li>
+                                        <li><a href="#">Pelagius</a></li>
+                                        <li><a href="#">Scipio Africanus</a></li>
+                                        <li><a href="#">Sun Tzu</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Commander Pairings</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Database <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                            <ul>
+                                <li><a href="#">Flag Building Costs (KvK)</a></li>
+                                <li><a href="#">KvK Structures: Honor & Buff</a></li>
+                                <li><a href="#">Items</a></li>
+                                <li><a href="#">Skill Upgrade Costs</a></li>
+                                <li><a href="#">Starlight Requirements</a></li>
+                                <li><a href="#">Super-Value Bundles</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Equipment Guide</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Expedition</a></li>
+                        <li><a href="#">Farming Guide</a></li>
+                        <li><a href="#">KvK Lost Kingdom</a></li>
+                        <li><a href="#">Peerless Scholar</a></li>
+                        <li><a href="#">Troops <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                            <ul>
+                                <li><a href="#">Infantry Troops</a></li>
+                                <li><a href="#">Archer Troops</a></li>
+                                <li><a href="#">Cavalry Troops</a></li>
+                                <li><a href="#">Siege Troops</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Buildings</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Talent Builds</a></li>
+                <li><a href="">Tier List</a></li>
+                <li><a href="">Gift Codes</a></li>
+                <li><a href="">Recruitment</a></li>
+                <li>
+                    <a href="https://rok.guide/download/" style="color: #00700a">
+                        <i class="fa fa-download"></i>
+                        Download for PC
+                    </a>
+                </li>
+            </ul>
+        </div><!-- .stellarnav -->
+    </div>
+    <div class="container-body">
+        <div class="container clearfix">
+            <article class="article ss-full-width">
+                <div id="content_box">
+                    <div id="post-500"
+                         class="g post post-500 page type-page status-publish has-post-thumbnail hentry has_thumb">
+                        <div class="single_page">
+                            <header><h1 class="title entry-title">Rise of Kingdoms Guides</h1></header>
+                            <div class="post-content box mark-links entry-content">
+                                <p style="font-size: 18px">This blog is the biggest fansite for <strong>Rise of Kingdoms
+                                    Guides and Strategies</strong>. This is where you can find
+                                    everything you must know about the game, from the most basic information to the most
+                                    advanced strategies, every single detail.</p>
+                                <p>&nbsp;</p>
+                                <div class="row" style="margin: 0">
+                                    <div class="col-md-3">
+                                        <a href="https://rok.guide/download/" data-wpel-link="internal">
+                                            <noscript><img
+                                                src=https://rok.guide/wp-content/uploads/2019/11/pc-version.png
+                                                alt="download game pc version" width='300' height='129'></noscript>
+                                            <img class=" ls-is-cached lazyloaded"
+                                                 src="https://rok.guide/wp-content/uploads/2019/11/pc-version.png"
+                                                 data-src="https://rok.guide/wp-content/uploads/2019/11/pc-version.png"
+                                                 alt="download game pc version" width="300" height="129">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="https://rok.guide/commanders/" data-wpel-link="internal">
+                                            <noscript><img
+                                                src=https://rok.guide/wp-content/uploads/2019/11/rise-of-kingdoms-commanders.png
+                                                alt="rise of kingdoms commanders" width='300' height='129'></noscript>
+                                            <img class=" ls-is-cached lazyloaded"
+                                                 src="https://rok.guide/wp-content/uploads/2019/11/rise-of-kingdoms-commanders.png"
+                                                 data-src="https://rok.guide/wp-content/uploads/2019/11/rise-of-kingdoms-commanders.png"
+                                                 alt="rise of kingdoms commanders" width="300" height="129">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="https://rok.guide/events/" data-wpel-link="internal">
+                                            <noscript>
+                                                <img
+                                                    src=https://rok.guide/wp-content/uploads/2019/11/events.png
+                                                    alt=events
+                                                    width='300' height='129'>
+                                            </noscript>
+                                            <img class=" ls-is-cached lazyloaded"
+                                                 src="https://rok.guide/wp-content/uploads/2019/11/events.png"
+                                                 data-src="https://rok.guide/wp-content/uploads/2019/11/events.png"
+                                                 alt="events" width="300" height="129">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="https://rok.guide/civilizations/" data-wpel-link="internal">
+                                            <noscript>
+                                                <img
+                                                    src=https://rok.guide/wp-content/uploads/2019/11/civilizations.png
+                                                    alt=civilizations width='300' height='129'>
+                                            </noscript>
+                                            <img class=" ls-is-cached lazyloaded"
+                                                 src="https://rok.guide/wp-content/uploads/2019/11/civilizations.png"
+                                                 data-src="https://rok.guide/wp-content/uploads/2019/11/civilizations.png"
+                                                 alt="civilizations" width="300" height="129">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="https://rok.guide/redeem-gift-codes/" data-wpel-link="internal">
+                                            <noscript>
+                                                <img src=https://rok.guide/wp-content/uploads/2019/11/giftcodes.png
+                                                     alt="rise of kingdoms giftcodes" width='300' height='129'>
+                                            </noscript>
+                                            <img class=" ls-is-cached lazyloaded"
+                                                 src="https://rok.guide/wp-content/uploads/2019/11/giftcodes.png"
+                                                 data-src="https://rok.guide/wp-content/uploads/2019/11/giftcodes.png"
+                                                 alt="rise of kingdoms giftcodes" width="300" height="129">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="https://rok.guide/buildings/lyceum-of-wisdom/"
+                                           data-wpel-link="internal">
+                                            <noscript>
+                                                <img
+                                                    src=https://rok.guide/wp-content/uploads/2020/08/peerless-scholar-1.png
+                                                    alt="rise of kingdoms peerless scholar" width='300' height='129'>
+                                            </noscript>
+                                            <img class=" ls-is-cached lazyloaded"
+                                                 src="https://rok.guide/wp-content/uploads/2020/08/peerless-scholar-1.png"
+                                                 data-src="https://rok.guide/wp-content/uploads/2020/08/peerless-scholar-1.png"
+                                                 alt="rise of kingdoms peerless scholar" width="300" height="129">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="https://rok.guide/talent-guide/" data-wpel-link="internal">
+                                            <noscript>
+                                                <img src=https://rok.guide/wp-content/uploads/2019/11/talent-builds.png
+                                                     alt="talent builds" width='300' height='129'>
+                                            </noscript>
+                                            <img class=" ls-is-cached lazyloaded"
+                                                 src="https://rok.guide/wp-content/uploads/2019/11/talent-builds.png"
+                                                 data-src="https://rok.guide/wp-content/uploads/2019/11/talent-builds.png"
+                                                 alt="talent builds" width="300" height="129">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="https://rok.guide/tier-list/" data-wpel-link="internal">
+                                            <noscript>
+                                                <img src=https://rok.guide/wp-content/uploads/2019/11/tier-list.png
+                                                     alt="rise of kingdoms tier list" width='300' height='129'>
+                                            </noscript>
+                                            <img class=" ls-is-cached lazyloaded"
+                                                 src="https://rok.guide/wp-content/uploads/2019/11/tier-list.png"
+                                                 data-src="https://rok.guide/wp-content/uploads/2019/11/tier-list.png"
+                                                 alt="rise of kingdoms tier list" width="300" height="129">
+                                        </a>
+                                    </div>
+                                </div>
+                                <h2 style="text-align: center;"><span style="font-size: 24pt;"><strong>Latest Rise of Kingdoms Strategy Guides</strong></span>
+                                </h2>
+                                <p>
+                                <noscript><img
+                                    class="aligncenter size-full wp-image-1997"
+                                    src=https://rok.guide/wp-content/uploads/2019/07/divider.png alt width='400'
+                                    height='17'></noscript>
+                                <img class="aligncenter size-full wp-image-1997 ls-is-cached lazyloaded"
+                                     src="https://rok.guide/wp-content/uploads/2019/07/divider.png"
+                                     data-src="https://rok.guide/wp-content/uploads/2019/07/divider.png" alt=""
+                                     width="400" height="17"></p>
+                                <div class="pt-cv-wrapper et_smooth_scroll_disabled">
+                                    <div
+                                        class="pt-cv-view pt-cv-grid pt-cv-colsys pt-cv-same-height pt-cv-pgloadmore pt-cv-mobile pt-cv-mobile-tablet"
+                                        id="pt-cv-view-ff5c98aqvp">
+                                        <div data-id="pt-cv-page-1" class="pt-cv-page" data-cvc="4" data-cvct="2"
+                                             data-cvcm="1">
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="993">
+                                                <div class="pt-cv-ifield">
+                                                    <a href="https://rok.guide/download/"
+                                                       class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                       target="_self" data-wpel-link="internal">
+                                                        <img width="385" height="220"
+                                                             src="https://rok.guide/wp-content/uploads/2019/04/rise-of-kingdoms-pc-385x220.png"
+                                                             class="pt-cv-thumbnail img-rounded no-lazyload  cvplazy"
+                                                             alt="Download Rise of Kingdoms for PC and Mac"
+                                                             style="opacity: 1;">
+                                                    </a>
+                                                    <h3 class="pt-cv-title" style="height: 66px;">
+                                                        <a href="https://rok.guide/download/" class="_self cvplbd"
+                                                           target="_self" data-wpel-link="internal">
+                                                            Download Rise of Kingdoms for PC and Mac (September 2020
+                                                            Updated)
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="960">
+                                                <div class="pt-cv-ifield">
+                                                    <a href="https://rok.guide/redeem-gift-codes/"
+                                                       class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                       target="_self" data-wpel-link="internal">
+                                                        <img width="385" height="220"
+                                                             src="https://rok.guide/wp-content/uploads/2019/04/redeem-gift-code-385x220.jpg"
+                                                             class="pt-cv-thumbnail img-rounded no-lazyload  cvplazy"
+                                                             alt="Rise of Kingdoms Gift Codes"
+                                                             style="opacity: 1;">
+                                                    </a>
+                                                    <h3 class="pt-cv-title" style="height: 66px;">
+                                                        <a href="https://rok.guide/redeem-gift-codes/"
+                                                           class="_self cvplbd" target="_self"
+                                                           data-wpel-link="internal">
+                                                            Complete List of Rise of Kingdoms Gift Codes (100% Working)
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="4209">
+                                                <div class="pt-cv-ifield">
+                                                    <a href="https://rok.guide/arms-training-event-guide/"
+                                                       class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                       target="_self" data-wpel-link="internal">
+                                                        <img width="385" height="220"
+                                                             src="https://rok.guide/wp-content/uploads/2020/06/arms-training-event-385x220.jpg"
+                                                             class="pt-cv-thumbnail img-rounded no-lazyload  cvplazy"
+                                                             alt="arms training event" style="opacity: 1;">
+                                                    </a>
+                                                    <h3 class="pt-cv-title" style="height: 66px;">
+                                                        <a href="https://rok.guide/arms-training-event-guide/"
+                                                           class="_self cvplbd" target="_self"
+                                                           data-wpel-link="internal">
+                                                            Arms Training Event Guide
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5488">
+                                                <div class="pt-cv-ifield">
+                                                    <a href="https://rok.guide/golden-keys/"
+                                                       class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                       target="_self" data-wpel-link="internal">
+                                                        <img width="385" height="220"
+                                                             src="https://rok.guide/wp-content/uploads/2020/09/Rise-of-Kingdoms-Golden-Key-385x220.jpg"
+                                                             class="pt-cv-thumbnail img-rounded no-lazyload  cvplazy"
+                                                             alt="Rise of Kingdoms Golden Key"
+                                                             style="opacity: 1;">
+                                                    </a>
+                                                    <h3 class="pt-cv-title" style="height: 66px;">
+                                                        <a href="https://rok.guide/golden-keys/" class="_self cvplbd"
+                                                           target="_self" data-wpel-link="internal">
+                                                            How To Get Golden Keys For Free
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5469">
+                                                <div class="pt-cv-ifield">
+                                                    <a href="https://rok.guide/matilda-of-flanders/"
+                                                       class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                       target="_self" data-wpel-link="internal">
+                                                        <img width="385" height="220"
+                                                             src="https://rok.guide/wp-content/uploads/2020/09/Matilda-of-Flanders-Rise-of-Kingdoms-thumbnail-385x220.jpg"
+                                                             class="pt-cv-thumbnail img-rounded no-lazyload  cvplazy"
+                                                             alt="Matilda of Flanders" style="opacity: 1;">
+                                                    </a>
+                                                    <h3 class="pt-cv-title" style="height: 44px;">
+                                                        <a href="https://rok.guide/matilda-of-flanders/"
+                                                           class="_self cvplbd" target="_self"
+                                                           data-wpel-link="internal">
+                                                            Matilda of Flanders
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="724">
+                                                <div class="pt-cv-ifield">
+                                                    <a href="https://rok.guide/more-than-gems/"
+                                                       class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                       target="_self" data-wpel-link="internal">
+                                                        <img width="385" height="220"
+                                                             src="https://rok.guide/wp-content/uploads/2019/03/rise-of-kingdoms-gems-385x220.png"
+                                                             class="pt-cv-thumbnail img-rounded no-lazyload  cvplazy"
+                                                             alt="rise of kingdoms gems"
+                                                             style="opacity: 1;">
+                                                    </a>
+                                                    <h3 class="pt-cv-title" style="height: 44px;"><a
+                                                        href="https://rok.guide/more-than-gems/" class="_self cvplbd"
+                                                        target="_self" data-wpel-link="internal">More Than Gems Guide –
+                                                        The Best Event To Spend Gems!</a></h3></div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5527">
+                                                <div class="pt-cv-ifield">
+                                                    <a href="https://rok.guide/anniversary-festival/"
+                                                       class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                       target="_self" data-wpel-link="internal">
+                                                        <img width="385" height="220"
+                                                             src="https://rok.guide/wp-content/uploads/2020/09/Rise-of-Kingdoms-Anniversary-Festival-Events-385x220.jpg"
+                                                             class="pt-cv-thumbnail img-rounded no-lazyload  cvplazy"
+                                                             alt="Anniversary Festival Events Guide"
+                                                             style="opacity: 1;">
+                                                    </a>
+                                                    <h3 class="pt-cv-title" style="height: 44px;">
+                                                        <a href="https://rok.guide/anniversary-festival/"
+                                                           class="_self cvplbd" target="_self"
+                                                           data-wpel-link="internal">
+                                                            Anniversary Festival Events Guide
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5514">
+                                                <div class="pt-cv-ifield">
+                                                    <a href="https://rok.guide/unblock-india-ban/"
+                                                       class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                       target="_self" data-wpel-link="internal">
+                                                        <img width="385" height="220"
+                                                             src="https://rok.guide/wp-content/uploads/2020/09/unblock-banned-Rise-of-Kingdoms-india-385x220.jpg"
+                                                             class="pt-cv-thumbnail img-rounded no-lazyload cvplazy"
+                                                             alt="unblock banned Rise of Kingdoms india"
+                                                             style="opacity: 1;">
+                                                    </a>
+                                                    <h3 class="pt-cv-title" style="height: 44px;">
+                                                        <a href="https://rok.guide/unblock-india-ban/"
+                                                           class="_self cvplbd" target="_self"
+                                                           data-wpel-link="internal">
+                                                            Play Rise of Kingdoms in India When Blocked
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5036">
+                                                <div class="pt-cv-ifield">
+                                                    <a href="https://rok.guide/constantine-i/"
+                                                       class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                       target="_self" data-wpel-link="internal">
+                                                        <img width="385" height="220"
+                                                             src="https://rok.guide/wp-content/uploads/2020/08/constantine-i-Rise-of-Kingdoms-385x220.jpg"
+                                                             class="pt-cv-thumbnail img-rounded no-lazyload  cvplazy"
+                                                             alt="Constantine I" style="opacity: 1;">
+                                                    </a>
+                                                    <h3 class="pt-cv-title" style="height: 22px;">
+                                                        <a href="https://rok.guide/constantine-i/" class="_self cvplbd"
+                                                        target="_self" data-wpel-link="internal">
+                                                            Constantine I
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center pt-cv-pagination-wrapper"><a
+                                        href="https://rok.guide/?_page=2" onclick="event.preventDefault()"
+                                        class="pt-cv-more btn btn-primary btn-sm" data-totalpages="8" data-nextpages="2"
+                                        data-sid="ff5c98aqvp" data-unid="" data-wpel-link="internal">Load More <span
+                                        class="caret"></span></a><img width="15" height="15" class="pt-cv-spinner"
+                                                                      alt="Loading..."
+                                                                      src="data:image/gif;base64,R0lGODlhDwAPALMPAMrKygwMDJOTkz09PZWVla+vr3p6euTk5M7OzuXl5TMzMwAAAJmZmWZmZszMzP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgAPACwAAAAADwAPAAAEQvDJaZaZOIcV8iQK8VRX4iTYoAwZ4iCYoAjZ4RxejhVNoT+mRGP4cyF4Pp0N98sBGIBMEMOotl6YZ3S61Bmbkm4mAgAh+QQFCgAPACwAAAAADQANAAAENPDJSRSZeA418itN8QiK8BiLITVsFiyBBIoYqnoewAD4xPw9iY4XLGYSjkQR4UAUD45DLwIAIfkEBQoADwAsAAAAAA8ACQAABC/wyVlamTi3nSdgwFNdhEJgTJoNyoB9ISYoQmdjiZPcj7EYCAeCF1gEDo4Dz2eIAAAh+QQFCgAPACwCAAAADQANAAAEM/DJBxiYeLKdX3IJZT1FU0iIg2RNKx3OkZVnZ98ToRD4MyiDnkAh6BkNC0MvsAj0kMpHBAAh+QQFCgAPACwGAAAACQAPAAAEMDC59KpFDll73HkAA2wVY5KgiK5b0RRoI6MuzG6EQqCDMlSGheEhUAgqgUUAFRySIgAh+QQFCgAPACwCAAIADQANAAAEM/DJKZNLND/kkKaHc3xk+QAMYDKsiaqmZCxGVjSFFCxB1vwy2oOgIDxuucxAMTAJFAJNBAAh+QQFCgAPACwAAAYADwAJAAAEMNAs86q1yaWwwv2Ig0jUZx3OYa4XoRAfwADXoAwfo1+CIjyFRuEho60aSNYlOPxEAAAh+QQFCgAPACwAAAIADQANAAAENPA9s4y8+IUVcqaWJ4qEQozSoAzoIyhCK2NFU2SJk0hNnyEOhKR2AzAAj4Pj4GE4W0bkJQIAOw==">
+                                        <div class="clear pt-cv-clear-pagination"></div>
+                                    </div>
+                                </div>
+                                <style
+                                    id="pt-cv-inline-style-68ea90c9fa">#pt-cv-view-ff5c98aqvp .pt-cv-title a, #pt-cv-view-ff5c98aqvp .panel-title {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    font-size: 17px !important;
+                                    line-height: 1.3 !important;
+                                    color: #2b2b2b !important;
+                                    display: block !important;
+                                    text-align: center !important;
+                                    clear: both !important;
+                                }
 
+                                #pt-cv-view-ff5c98aqvp .pt-cv-title a:hover, #pt-cv-view-ff5c98aqvp .panel-title:hover {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    font-size: 17px !important;
+                                    line-height: 1.3 !important;
+                                    color: #1b73b7 !important;
+                                    display: block !important;
+                                    text-align: center !important;
+                                    clear: both !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .pt-cv-hover-wrapper::before {
+                                    background-color: rgba(0, 0, 0, .3) !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .pt-cv-content-item:hover .pt-cv-hover-wrapper::before {
+                                    background-color: rgba(51, 51, 51, .6) !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp:not(.pt-cv-nohover) .pt-cv-mask * {
+                                    color: #fff;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .pt-cv-carousel-caption {
+                                    background-color: rgba(51, 51, 51, .6) !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .pt-cv-specialp {
+                                    background-color: #CC3333 !important
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .pt-cv-specialp * {
+                                    color: #fff !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .pt-cv-pficon {
+                                    color: #bbb !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .add_to_cart_button, #pt-cv-view-ff5c98aqvp .add_to_cart_button * {
+                                    color: #ffffff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .woocommerce-onsale {
+                                    color: #ffffff !important;
+                                    background-color: #ff5a5f !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .pt-cv-readmore {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    color: #ffffff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .pt-cv-readmore:hover {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    color: #ffffff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp + .pt-cv-pagination-wrapper .pt-cv-more-inactive, #pt-cv-view-ff5c98aqvp + .pt-cv-pagination-wrapper .pagination a {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    color: #3f3f3f !important;
+                                    background-color: #ffffff !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp + .pt-cv-pagination-wrapper .pt-cv-more, #pt-cv-view-ff5c98aqvp + .pt-cv-pagination-wrapper .pagination .active a {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    color: #ffffff !important;
+                                    background-color: #000000 !important;
+                                }
+
+                                [id^='pt-cv-filter-bar-ff5c98aqvp'] .active.pt-cv-filter-option, [id^='pt-cv-filter-bar-ff5c98aqvp'] .active .pt-cv-filter-option, [id^='pt-cv-filter-bar-ff5c98aqvp'] .selected.pt-cv-filter-option, [id^='pt-cv-filter-bar-ff5c98aqvp'] .dropdown-toggle {
+                                    color: #fff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                [id^='pt-cv-filter-bar-ff5c98aqvp'] .pt-cv-filter-title {
+                                    color: #fff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-gls-ff5c98aqvp li a.pt-active {
+                                    color: #fff !important;
+                                    background-color: #ff5a5f !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .pt-cv-gls-header {
+                                    color: #fff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .img-rounded, #pt-cv-view-ff5c98aqvp .pt-cv-hover-wrapper {
+                                    -webkit-border-radius: 6px !important;
+                                    -moz-border-radius: 6px !important;
+                                    border-radius: 6px !important;
+                                }
+
+                                #pt-cv-view-ff5c98aqvp .pt-cv-cap-w-img {
+                                    border-bottom-left-radius: 6px !important;
+                                    border-bottom-right-radius: 6px !important;
+                                }</style>
+                                <noscript></noscript>
+                                <p style="text-align: center;"><em>If you want to be a part of this blog, want to give
+                                    the community your best guides/tips for the game, please visit <a
+                                        href="https://rok.guide/contact-us/" data-wpel-link="internal">this
+                                        page</a>.</em></p>
+                                <h3 style="text-align: center;"><strong>RoK Patch Notes</strong></h3>
+                                <div class="pt-cv-wrapper et_smooth_scroll_disabled">
+                                    <div
+                                        class="pt-cv-view pt-cv-grid pt-cv-colsys pt-cv-same-height pt-cv-pgloadmore pt-cv-mobile pt-cv-mobile-tablet"
+                                        id="pt-cv-view-21bec10suv">
+                                        <div data-id="pt-cv-page-1" class="pt-cv-page" data-cvc="4" data-cvct="2"
+                                             data-cvcm="1">
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5314">
+                                                <div class="pt-cv-ifield"><a href="https://rok.guide/update-1-0-38/"
+                                                                             class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                                             target="_self"
+                                                                             data-wpel-link="internal"><img width="385"
+                                                                                                            height="220"
+                                                                                                            src="https://rok.guide/wp-content/uploads/2019/05/rok-patch-notes-385x220.jpg"
+                                                                                                            class="pt-cv-thumbnail img-none no-lazyload "
+                                                                                                            alt="rise of kingdoms update"></a>
+                                                    <h3 class="pt-cv-title" style="height: 44px;"><a
+                                                        href="https://rok.guide/update-1-0-38/" class="_self cvplbd"
+                                                        target="_self" data-wpel-link="internal">Update 1.0.38:
+                                                        “Anniversary Festival”</a></h3></div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="4760">
+                                                <div class="pt-cv-ifield"><a href="https://rok.guide/update-1-0-37/"
+                                                                             class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                                             target="_self"
+                                                                             data-wpel-link="internal"><img width="385"
+                                                                                                            height="220"
+                                                                                                            src="https://rok.guide/wp-content/uploads/2019/05/rok-patch-notes-385x220.jpg"
+                                                                                                            class="pt-cv-thumbnail img-none no-lazyload "
+                                                                                                            alt="rise of kingdoms update"></a>
+                                                    <h3 class="pt-cv-title" style="height: 44px;"><a
+                                                        href="https://rok.guide/update-1-0-37/" class="_self cvplbd"
+                                                        target="_self" data-wpel-link="internal">Update 1.0.37: “Geared
+                                                        Up”</a></h3></div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="4518">
+                                                <div class="pt-cv-ifield"><a href="https://rok.guide/update-1-0-36/"
+                                                                             class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                                             target="_self"
+                                                                             data-wpel-link="internal"><img width="385"
+                                                                                                            height="220"
+                                                                                                            src="https://rok.guide/wp-content/uploads/2019/05/rok-patch-notes-385x220.jpg"
+                                                                                                            class="pt-cv-thumbnail img-none no-lazyload "
+                                                                                                            alt="rise of kingdoms update"></a>
+                                                    <h3 class="pt-cv-title" style="height: 44px;"><a
+                                                        href="https://rok.guide/update-1-0-36/" class="_self cvplbd"
+                                                        target="_self" data-wpel-link="internal">Update 1.0.36: “Summer
+                                                        of Passion”</a></h3></div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="4316">
+                                                <div class="pt-cv-ifield"><a href="https://rok.guide/july-7-update/"
+                                                                             class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                                             target="_self"
+                                                                             data-wpel-link="internal"><img width="385"
+                                                                                                            height="220"
+                                                                                                            src="https://rok.guide/wp-content/uploads/2019/05/rok-patch-notes-385x220.jpg"
+                                                                                                            class="pt-cv-thumbnail img-none no-lazyload "
+                                                                                                            alt="rise of kingdoms update"></a>
+                                                    <h3 class="pt-cv-title" style="height: 44px;"><a
+                                                        href="https://rok.guide/july-7-update/" class="_self cvplbd"
+                                                        target="_self" data-wpel-link="internal">7/7 Update &amp;
+                                                        Optimizations</a></h3></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center pt-cv-pagination-wrapper"><a
+                                        href="https://rok.guide/?_page=2" onclick="event.preventDefault()"
+                                        class="pt-cv-more btn btn-primary btn-sm" data-totalpages="6" data-nextpages="2"
+                                        data-sid="21bec10suv" data-unid="" data-wpel-link="internal">More <span
+                                        class="caret"></span></a><img width="15" height="15" class="pt-cv-spinner"
+                                                                      alt="Loading..."
+                                                                      src="data:image/gif;base64,R0lGODlhDwAPALMPAMrKygwMDJOTkz09PZWVla+vr3p6euTk5M7OzuXl5TMzMwAAAJmZmWZmZszMzP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgAPACwAAAAADwAPAAAEQvDJaZaZOIcV8iQK8VRX4iTYoAwZ4iCYoAjZ4RxejhVNoT+mRGP4cyF4Pp0N98sBGIBMEMOotl6YZ3S61Bmbkm4mAgAh+QQFCgAPACwAAAAADQANAAAENPDJSRSZeA418itN8QiK8BiLITVsFiyBBIoYqnoewAD4xPw9iY4XLGYSjkQR4UAUD45DLwIAIfkEBQoADwAsAAAAAA8ACQAABC/wyVlamTi3nSdgwFNdhEJgTJoNyoB9ISYoQmdjiZPcj7EYCAeCF1gEDo4Dz2eIAAAh+QQFCgAPACwCAAAADQANAAAEM/DJBxiYeLKdX3IJZT1FU0iIg2RNKx3OkZVnZ98ToRD4MyiDnkAh6BkNC0MvsAj0kMpHBAAh+QQFCgAPACwGAAAACQAPAAAEMDC59KpFDll73HkAA2wVY5KgiK5b0RRoI6MuzG6EQqCDMlSGheEhUAgqgUUAFRySIgAh+QQFCgAPACwCAAIADQANAAAEM/DJKZNLND/kkKaHc3xk+QAMYDKsiaqmZCxGVjSFFCxB1vwy2oOgIDxuucxAMTAJFAJNBAAh+QQFCgAPACwAAAYADwAJAAAEMNAs86q1yaWwwv2Ig0jUZx3OYa4XoRAfwADXoAwfo1+CIjyFRuEho60aSNYlOPxEAAAh+QQFCgAPACwAAAIADQANAAAENPA9s4y8+IUVcqaWJ4qEQozSoAzoIyhCK2NFU2SJk0hNnyEOhKR2AzAAj4Pj4GE4W0bkJQIAOw==">
+                                        <div class="clear pt-cv-clear-pagination"></div>
+                                    </div>
+                                </div>
+                                <style
+                                    id="pt-cv-inline-style-73419e0apj">#pt-cv-view-21bec10suv .pt-cv-title a, #pt-cv-view-21bec10suv .panel-title {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    font-size: 17px !important;
+                                    line-height: 1.3 !important;
+                                    color: #2b2b2b !important;
+                                    display: block !important;
+                                    text-align: center !important;
+                                    clear: both !important;
+                                }
+
+                                #pt-cv-view-21bec10suv .pt-cv-title a:hover, #pt-cv-view-21bec10suv .panel-title:hover {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    font-size: 17px !important;
+                                    line-height: 1.3 !important;
+                                    color: #1b73b7 !important;
+                                    display: block !important;
+                                    text-align: center !important;
+                                    clear: both !important;
+                                }
+
+                                #pt-cv-view-21bec10suv .pt-cv-hover-wrapper::before {
+                                    background-color: rgba(0, 0, 0, .3) !important;
+                                }
+
+                                #pt-cv-view-21bec10suv .pt-cv-content-item:hover .pt-cv-hover-wrapper::before {
+                                    background-color: rgba(51, 51, 51, .6) !important;
+                                }
+
+                                #pt-cv-view-21bec10suv:not(.pt-cv-nohover) .pt-cv-mask * {
+                                    color: #fff;
+                                }
+
+                                #pt-cv-view-21bec10suv .pt-cv-carousel-caption {
+                                    background-color: rgba(51, 51, 51, .6) !important;
+                                }
+
+                                #pt-cv-view-21bec10suv .pt-cv-specialp {
+                                    background-color: #CC3333 !important
+                                }
+
+                                #pt-cv-view-21bec10suv .pt-cv-specialp * {
+                                    color: #fff !important;
+                                }
+
+                                #pt-cv-view-21bec10suv .pt-cv-pficon {
+                                    color: #bbb !important;
+                                }
+
+                                #pt-cv-view-21bec10suv .add_to_cart_button, #pt-cv-view-21bec10suv .add_to_cart_button * {
+                                    color: #ffffff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-view-21bec10suv .woocommerce-onsale {
+                                    color: #ffffff !important;
+                                    background-color: #ff5a5f !important;
+                                }
+
+                                #pt-cv-view-21bec10suv .pt-cv-readmore {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    color: #ffffff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-view-21bec10suv .pt-cv-readmore:hover {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    color: #ffffff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-view-21bec10suv + .pt-cv-pagination-wrapper .pt-cv-more-inactive, #pt-cv-view-21bec10suv + .pt-cv-pagination-wrapper .pagination a {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    color: #3f3f3f !important;
+                                    background-color: #ffffff !important;
+                                }
+
+                                #pt-cv-view-21bec10suv + .pt-cv-pagination-wrapper .pt-cv-more, #pt-cv-view-21bec10suv + .pt-cv-pagination-wrapper .pagination .active a {
+                                    font-family: 'Roboto', Arial, serif !important;
+                                    color: #ffffff !important;
+                                    background-color: #000000 !important;
+                                }
+
+                                [id^='pt-cv-filter-bar-21bec10suv'] .active.pt-cv-filter-option, [id^='pt-cv-filter-bar-21bec10suv'] .active .pt-cv-filter-option, [id^='pt-cv-filter-bar-21bec10suv'] .selected.pt-cv-filter-option, [id^='pt-cv-filter-bar-21bec10suv'] .dropdown-toggle {
+                                    color: #fff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                [id^='pt-cv-filter-bar-21bec10suv'] .pt-cv-filter-title {
+                                    color: #fff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-gls-21bec10suv li a.pt-active {
+                                    color: #fff !important;
+                                    background-color: #ff5a5f !important;
+                                }
+
+                                #pt-cv-view-21bec10suv .pt-cv-gls-header {
+                                    color: #fff !important;
+                                    background-color: #00aeef !important;
+                                }</style>
+                                <noscript></noscript>
+                                <div class="wps-shortcode-wrapper wps-button wps-button-center wps-style-default "
+                                     id="wps-button">
+                                    <a href="https://rok.guide/submit-articles/" class=""
+                                       style="color:#FFFFFF;background-color:#2D89EF;border-color:#0056bc;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px"
+                                       target="_self" rel="nofollow" title="Submit Articles" id="submit-article">
+<span
+    style="color:#FFFFFF;padding:13px 50px;font-size:20px;border-color:#79d5ff;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:0px 0px 0px #000">
+<i class="fa fa-pencil-square"></i>Submit Articles &amp; Earn Giftcards	</span>
+                                    </a></div>
+                                <p>
+                                <noscript><img
+                                    class="aligncenter size-full wp-image-1997"
+                                    src=https://rok.guide/wp-content/uploads/2019/07/divider.png alt width='400'
+                                    height='17'></noscript>
+                                <img class="aligncenter size-full wp-image-1997 ls-is-cached lazyloaded"
+                                     src="https://rok.guide/wp-content/uploads/2019/07/divider.png"
+                                     data-src="https://rok.guide/wp-content/uploads/2019/07/divider.png" alt=""
+                                     width="400" height="17"></p><h2 style="text-align: center;"><span
+                                style="font-size: 24pt;"><strong>Commander Guides</strong></span></h2>
+                                <div class="pt-cv-wrapper et_smooth_scroll_disabled">
+                                    <div class="pt-cv-view pt-cv-grid pt-cv-colsys pt-cv-mobile pt-cv-mobile-tablet"
+                                         id="pt-cv-view-bb957fczab">
+                                        <div data-id="pt-cv-page-1" class="pt-cv-page" data-cvc="5">
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5366">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/aethelflaed-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Aethelflaed.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Aethelflaed"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/aethelflaed-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Aethelflaed</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5372">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/alexander-the-great-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Alexander-the-Great.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Alexander The Great"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/alexander-the-great-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Alexander
+                                                        The Great</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5374">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/artemisia-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/08/Artemisia-I.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Artemisia"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/artemisia-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Artemisia</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5370">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/attila-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Attila.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Attila"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/attila-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Attila</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5377">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/baibars-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Baibars.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Baibars"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/baibars-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Baibars</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5379">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/belisarius-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Belisarius.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Belisarius"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/belisarius-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Belisarius</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5382">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/boudica-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Boudica.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Boudica"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/boudica-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Boudica</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5384">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/cao-cao-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Cao-Cao.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Cao Cao"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/cao-cao-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Cao
+                                                        Cao</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5455">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/chandragupta-maurya-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/08/Chandragupta-Maurya.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Chandragupta Maurya"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/chandragupta-maurya-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Chandragupta
+                                                        Maurya</a></h4></div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5388">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/charlemagne-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Charlemagne.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Charlemagne"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/charlemagne-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Charlemagne</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5386">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/charles-martel-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Charles-Martel.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Charles Martel"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/charles-martel-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Charles
+                                                        Martel</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5390">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/cleopatra-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Cleopatra-VII.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Cleopatra"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/cleopatra-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Cleopatra</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5392">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/constantine-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Constantine-I.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Constantine I"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/constantine-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Constantine
+                                                        I</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5396">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/edward-of-woodstock-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Edward-of-Woodstock.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Edward of Woodstock"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/edward-of-woodstock-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Edward
+                                                        of Woodstock</a></h4></div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5394">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/el-cid-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/El-Cid.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="El Cid"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/el-cid-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">El
+                                                        Cid</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5398">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/eulji-mundeok-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Eulji-Mundeok.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Eulji Mundeok"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/eulji-mundeok-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Eulji
+                                                        Mundeok</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5400">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/frederick-i-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Frederick-I.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Frederick I"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/frederick-i-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Frederick
+                                                        I</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5402">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/genghis-khan-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Genghis-Khan.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Genghis Khan"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/genghis-khan-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Genghis
+                                                        Khan</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5404">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/guan-yu-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Guan-Yu.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Guan Yu"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/guan-yu-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Guan
+                                                        Yu</a></h4></div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5406">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/hannibal-barca-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Hannibal-Barca.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Hannibal Barca"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/hannibal-barca-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Hannibal
+                                                        Barca</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5408">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/hermann-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Hermann.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Hermann"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/hermann-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Hermann</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5414">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/ishida-mitsunari-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Ishida-Mitsunari-1.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Ishida Mitsunari"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/ishida-mitsunari-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Ishida
+                                                        Mitsunari</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5410">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/joan-of-arc-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Joan-of-Arc.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Joan of Arc"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/joan-of-arc-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Joan
+                                                        of Arc</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5412">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/julius-caesar-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Julius-Caesar.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Julius Caesar"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/julius-caesar-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Julius
+                                                        Caesar</a></h4></div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5647">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/keira-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/09/Keira.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Keira"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/keira-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Keira</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5416">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/kusunoki-masashige-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Kusunoki-Masashige.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Kusunoki Masashige"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/kusunoki-masashige-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Kusunoki
+                                                        Masashige</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5418">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/leonidas-i-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Leonidas-I.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Leonidas I"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/leonidas-i-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Leonidas
+                                                        I</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5420">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/lohar-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Lohar.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Lohar"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/lohar-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Lohar</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5633">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/matilda-of-flanders-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/08/Matilda-of-Flanders.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Matilda of Flanders"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/matilda-of-flanders-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Matilda
+                                                        of Flanders</a></h4></div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5422">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/mehmed-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Mehmed-II.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Mehmed II"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/mehmed-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Mehmed
+                                                        II</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5424">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/minamoto-no-yoshitsune-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Minamoto-no-Yoshitsune.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Minamoto no Yoshitsune"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/minamoto-no-yoshitsune-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Minamoto
+                                                        no Yoshitsune</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5426">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/osman-i-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Osman-I.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Osman I"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/osman-i-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Osman
+                                                        I</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5428">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/pelagius-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Pelagius.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Pelagius"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/pelagius-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Pelagius</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5430">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/ramesses-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/08/Ramesses-II.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Ramesses"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/ramesses-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Ramesses</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5432">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/richard-i-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Richard-I.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Richard I"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/richard-i-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Richard
+                                                        I</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5451">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/saladin-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Saladin.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Saladin"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/saladin-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Saladin</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5434">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/scipio-africanus-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Scipio-Africanus.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Scipio Africanus"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/scipio-africanus-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Scipio
+                                                        Africanus</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5438">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/seondeok-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Seondeok.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Seondeok"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/seondeok-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Seondeok</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5436">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/sun-tzu-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Sun-Tzu.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Sun Tzu"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/sun-tzu-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Sun
+                                                        Tzu</a></h4></div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5441">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/takeda-shingen-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Takeda-Shingen.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Takeda Shingen"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/takeda-shingen-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Takeda
+                                                        Shingen</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5445">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/theodora-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/08/Theodora.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Theodora"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/theodora-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Theodora</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5443">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/tomyris-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Tomyris.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Tomyris"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/tomyris-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Tomyris</a>
+                                                    </h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5457">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/william-i-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/08/William-I.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="William I"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/william-i-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">William
+                                                        I</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5453">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/wu-zetian-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Wu-Zetian.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Wu Zetian"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/wu-zetian-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Wu
+                                                        Zetian</a></h4></div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5447">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/yi-seong-gye-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/03/Yi-Seong-Gye.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Yi Seong-Gye"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/yi-seong-gye-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Yi
+                                                        Seong-Gye</a></h4></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 col-xs-4 pt-cv-content-item pt-cv-1-col"
+                                                 data-pid="5449">
+                                                <div class="pt-cv-ifield"><a
+                                                    href="https://rok.guide/commander/yi-sun-sin-guide/"
+                                                    class="_self pt-cv-href-thumbnail pt-cv-thumb-default cvplbd"
+                                                    target="_self" data-wpel-link="internal"><img width="120"
+                                                                                                  height="133"
+                                                                                                  src="https://rok.guide/wp-content/uploads/2020/08/Yi-Sun-sin.png"
+                                                                                                  class="pt-cv-thumbnail img-none no-lazyload  cvplazy"
+                                                                                                  alt="Yi Sun-sin"
+                                                                                                  style="opacity: 1;"></a>
+                                                    <h4 class="pt-cv-title"><a
+                                                        href="https://rok.guide/commander/yi-sun-sin-guide/"
+                                                        class="_self cvplbd" target="_self" data-wpel-link="internal">Yi
+                                                        Sun-sin</a></h4></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <style id="pt-cv-inline-style-df5be02aet">#pt-cv-view-bb957fczab .pt-cv-href-thumbnail {
+                                    margin-left: auto !important;
+                                    margin-right: auto !important;
+                                    display: block !important;
+                                    text-align: center !important;
+                                    clear: both !important;
+                                }
+
+                                #pt-cv-view-bb957fczab .pt-cv-title a, #pt-cv-view-bb957fczab .panel-title {
+                                    color: #444444 !important;
+                                    font-weight: 600 !important;
+                                    display: block !important;
+                                    text-align: center !important;
+                                    clear: both !important;
+                                }
+
+                                #pt-cv-view-bb957fczab .pt-cv-hover-wrapper::before {
+                                    background-color: rgba(0, 0, 0, .3) !important;
+                                }
+
+                                #pt-cv-view-bb957fczab .pt-cv-content-item:hover .pt-cv-hover-wrapper::before {
+                                    background-color: rgba(51, 51, 51, .6) !important;
+                                }
+
+                                #pt-cv-view-bb957fczab:not(.pt-cv-nohover) .pt-cv-mask * {
+                                    color: #fff;
+                                }
+
+                                #pt-cv-view-bb957fczab .pt-cv-carousel-caption {
+                                    background-color: rgba(51, 51, 51, .6) !important;
+                                }
+
+                                #pt-cv-view-bb957fczab .pt-cv-specialp {
+                                    background-color: #CC3333 !important
+                                }
+
+                                #pt-cv-view-bb957fczab .pt-cv-specialp * {
+                                    color: #fff !important;
+                                }
+
+                                #pt-cv-view-bb957fczab .pt-cv-pficon {
+                                    color: #bbb !important;
+                                }
+
+                                #pt-cv-view-bb957fczab .add_to_cart_button, #pt-cv-view-bb957fczab .add_to_cart_button * {
+                                    color: #ffffff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-view-bb957fczab .woocommerce-onsale {
+                                    color: #ffffff !important;
+                                    background-color: #ff5a5f !important;
+                                }
+
+                                #pt-cv-view-bb957fczab .pt-cv-readmore {
+                                    color: #ffffff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-view-bb957fczab .pt-cv-readmore:hover {
+                                    color: #ffffff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-view-bb957fczab + .pt-cv-pagination-wrapper .pt-cv-more, #pt-cv-view-bb957fczab + .pt-cv-pagination-wrapper .pagination .active a {
+                                    color: #ffffff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                [id^='pt-cv-filter-bar-bb957fczab'] .active.pt-cv-filter-option, [id^='pt-cv-filter-bar-bb957fczab'] .active .pt-cv-filter-option, [id^='pt-cv-filter-bar-bb957fczab'] .selected.pt-cv-filter-option, [id^='pt-cv-filter-bar-bb957fczab'] .dropdown-toggle {
+                                    color: #fff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                [id^='pt-cv-filter-bar-bb957fczab'] .pt-cv-filter-title {
+                                    color: #fff !important;
+                                    background-color: #00aeef !important;
+                                }
+
+                                #pt-cv-gls-bb957fczab li a.pt-active {
+                                    color: #fff !important;
+                                    background-color: #ff5a5f !important;
+                                }
+
+                                #pt-cv-view-bb957fczab .pt-cv-gls-header {
+                                    color: #fff !important;
+                                    background-color: #00aeef !important;
+                                }</style>
+                                <p style="text-align: center;"><span
+                                    style="font-size: 18pt;"><strong>Follow Us!</strong></span></p>
+                                <p style="text-align: center;"></p>
+                                <div
+                                    class="et_social_networks et_social_5col et_social_simple et_social_rectangle et_social_top et_social_nospace et_social_mobile_on et_social_withnetworknames et_social_outer_dark">
+                                    <ul class="et_social_icons_container">
+                                        <li class="et_social_facebook">
+                                            <a href="https://www.facebook.com/rokblog/" class="et_social_follow"
+                                               data-social_name="facebook" data-social_type="follow" data-post_id="500"
+                                               target="_blank" data-wpel-link="external"
+                                               rel="nofollow external noopener noreferrer">
+                                                <i class="et_social_icon et_social_icon_facebook"></i>
+                                                <div class="et_social_network_label">
+                                                    <div class="et_social_networkname">Facebook</div>
+                                                </div>
+                                                <span class="et_social_overlay"></span>
+                                            </a></li>
+                                        <li class="et_social_youtube">
+                                            <a href="https://www.youtube.com/channel/UCM2N9uCL0nvKNuJT7u4t2Lw"
+                                               class="et_social_follow" data-social_name="youtube"
+                                               data-social_type="follow" data-post_id="500" target="_blank"
+                                               data-wpel-link="external" rel="nofollow external noopener noreferrer">
+                                                <i class="et_social_icon et_social_icon_youtube"></i>
+                                                <div class="et_social_network_label">
+                                                    <div class="et_social_networkname">YouTube</div>
+                                                </div>
+                                                <span class="et_social_overlay"></span>
+                                            </a></li>
+                                        <li class="et_social_reddit">
+                                            <a href="https://www.reddit.com/r/CommunityRoK/" class="et_social_follow"
+                                               data-social_name="reddit" data-social_type="follow" data-post_id="500"
+                                               target="_blank" data-wpel-link="external"
+                                               rel="nofollow external noopener noreferrer">
+                                                <i class="et_social_icon et_social_icon_reddit"></i>
+                                                <div class="et_social_network_label">
+                                                    <div class="et_social_networkname">reddit</div>
+                                                </div>
+                                                <span class="et_social_overlay"></span>
+                                            </a></li>
+                                        <li class="et_social_picassa">
+                                            <a href="https://www.twitch.tv/12inchpvpness" class="et_social_follow"
+                                               data-social_name="picassa" data-social_type="follow" data-post_id="500"
+                                               target="_blank" data-wpel-link="external"
+                                               rel="nofollow external noopener noreferrer">
+                                                <i class="et_social_icon et_social_icon_picassa"></i>
+                                                <div class="et_social_network_label">
+                                                    <div class="et_social_networkname">Twitch</div>
+                                                </div>
+                                                <span class="et_social_overlay"></span>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <p></p>
+                                <div
+                                    class="wps-shortcode-wrapper wps-section wps-size-box-full wps-background-fixed wps-vertical-center wps-align-center lazyloaded"
+                                    id="wps-section" data-bg="https://i.imgur.com/tpnmXOg.png"
+                                    style="height: auto; background-image: url(&quot;https://i.imgur.com/tpnmXOg.png&quot;); background-repeat: no-repeat; background-position: center center; background-size: cover; padding: 60px; margin-bottom: 15px;">
+                                    <div class="wps-content-wrapper"
+                                         style="background-color:; color: #fff; width: 100%;"><p></p>
+                                        <p></p>
+                                        <div class="wps-shortcode-wrapper wps-row clear " id="wps-row"><p></p>
+                                            <p></p>
+                                            <div class="wps-column wps-shortcode-wrapper wps-column-size-1-5 ">
+                                                <div class="wps-column-inner"><br></div>
+                                            </div>
+                                            <p></p>
+                                            <p></p>
+                                            <div class="wps-column wps-shortcode-wrapper wps-column-size-1-5 ">
+                                                <div class="wps-column-inner"><a
+                                                    href="https://play.google.com/store/apps/details?id=com.lilithgame.roc.gp"
+                                                    data-wpel-link="external" target="_blank"
+                                                    rel="nofollow external noopener noreferrer">
+                                                    <noscript><img
+                                                        class="aligncenter size-full"
+                                                        src=https://i.imgur.com/9QsyD9H.png
+                                                        alt="download rise of kingdoms from Android" width='180'
+                                                        height='53'></noscript>
+                                                    <img class="aligncenter size-full lazyloaded"
+                                                         src="https://i.imgur.com/9QsyD9H.png"
+                                                         data-src="https://i.imgur.com/9QsyD9H.png"
+                                                         alt="download rise of kingdoms from Android" width="180"
+                                                         height="53"></a></div>
+                                            </div>
+                                            <p></p>
+                                            <p></p>
+                                            <div class="wps-column wps-shortcode-wrapper wps-column-size-1-5 ">
+                                                <div class="wps-column-inner"><a
+                                                    href="https://itunes.apple.com/app/id1354260888"
+                                                    data-wpel-link="external" target="_blank"
+                                                    rel="nofollow external noopener noreferrer">
+                                                    <noscript><img
+                                                        class="aligncenter size-full"
+                                                        src=https://i.imgur.com/Stwd0Qb.png
+                                                        alt="download rise of kingdoms for iOS" width='180' height='53'>
+                                                    </noscript>
+                                                    <img class="aligncenter size-full lazyloaded"
+                                                         src="https://i.imgur.com/Stwd0Qb.png"
+                                                         data-src="https://i.imgur.com/Stwd0Qb.png"
+                                                         alt="download rise of kingdoms for iOS" width="180"
+                                                         height="53"></a></div>
+                                            </div>
+                                            <p></p>
+                                            <p></p>
+                                            <div class="wps-column wps-shortcode-wrapper wps-column-size-1-5 ">
+                                                <div class="wps-column-inner"><a href="https://rok.guide/download/"
+                                                                                 data-wpel-link="internal">
+                                                    <noscript><img
+                                                        class="aligncenter size-full"
+                                                        src=https://i.imgur.com/8viNeCu.png
+                                                        alt="download rise of kingdoms for pc and mac" width='180'
+                                                        height='53'></noscript>
+                                                    <img class="aligncenter size-full lazyloaded"
+                                                         src="https://i.imgur.com/8viNeCu.png"
+                                                         data-src="https://i.imgur.com/8viNeCu.png"
+                                                         alt="download rise of kingdoms for pc and mac" width="180"
+                                                         height="53"></a></div>
+                                            </div>
+                                            <p></p>
+                                            <p></p>
+                                            <div class="wps-column wps-shortcode-wrapper wps-column-size-1-5 ">
+                                                <div class="wps-column-inner"><br></div>
+                                            </div>
+                                            <br></div>
+                                        <p></p>
+                                        <p></p></div>
+                                </div>
+                                <h3 style="text-align: center;"><span style="font-size: 18pt;"><strong>What is Rise of Kingdoms?</strong></span>
+                                </h3>
+                                <p>
+                                <noscript><img
+                                    class="aligncenter size-full wp-image-1997"
+                                    src=https://rok.guide/wp-content/uploads/2019/07/divider.png alt width='400'
+                                    height='17'></noscript>
+                                <img class="aligncenter size-full wp-image-1997 ls-is-cached lazyloaded"
+                                     src="https://rok.guide/wp-content/uploads/2019/07/divider.png"
+                                     data-src="https://rok.guide/wp-content/uploads/2019/07/divider.png" alt=""
+                                     width="400" height="17"></p><p>From March 5th 2019, the name of the game Rise of
+                                Civilizations is official changed to <strong>Rise of Kingdoms</strong>!</p>
+                                <p><strong>RoK</strong> is the next-level RTS game for smartphones and tablets.</p>
+                                <p>This stunning strategy video game features an endlessly open world, where you can
+                                    build your own city, start conquering the world and writing your own history for the
+                                    kingdom!</p>
+                                <h3>Features</h3>
+                                <hr>
+                                <ul>
+                                    <li><strong>11 unique nations and growing</strong>: You can choose to become either
+                                        Rome, Germany, Britain, France, Spain, China, Japan, Korea, Arabia, Ottoman or
+                                        Byzantium and start building your own city to become the most powerful one in
+                                        the kingdom! Each nation has its own unique pros and cons. More nations are
+                                        being added in the next updates.
+                                    </li>
+                                    <li><strong>Real-time Battles</strong>: In this game, you can do the battles on a
+                                        huge, wide, open and detailed map with other players in real time. There are
+                                        tons of natural obstacles like forests, rivers, lakes, mountains and strategic
+                                        passes on the map.
+                                    </li>
+                                    <li><strong>Realistic Day and Night cycle</strong>: Not like other games, Rise of
+                                        Kingdoms has a realistic day&amp;night cycle. Take the advantage of night to do
+                                        surprising attacks on the opponents. Light is your friend during the day time.
+                                    </li>
+                                    <li><strong>Massive Unexplored Map:</strong> At the beginning of the kingdom, many
+                                        places are not discovered by human, thus there isn’t any complete map of the
+                                        world. Start exploring the world and un-fogging the map!
+                                    </li>
+                                    <li><strong>Pick the Legend Commanders you love:&nbsp;</strong>The game features a
+                                        lot of historical figures like Sun Tzu, Julius Caesar, Cleopatra, Joan of Arc,
+                                        Kusunoki Masahige etc. Use the commanders you love and start conquering the
+                                        world with your unstoppable armies!
+                                    </li>
+                                </ul>
+                                <div class="lyte-wrapper" title="Rise of Kingdoms Trailer"
+                                     style="width:640px;max-width: 100%;margin:5px auto;">
+                                    <div class="lyte hidef lP" id="WYL_ZsIC5z_q1W8" itemprop="video" itemscope=""
+                                         itemtype="https://schema.org/VideoObject">
+                                        <div>
+                                            <meta itemprop="thumbnailUrl"
+                                                  content="https://i.ytimg.com/vi/ZsIC5z_q1W8/maxresdefault.jpg">
+                                            <meta itemprop="embedURL"
+                                                  content="https://www.youtube.com/embed/ZsIC5z_q1W8">
+                                            <meta itemprop="duration" content="PT31S">
+                                            <meta itemprop="uploadDate" content="2019-03-07T08:58:00.000Z">
+                                        </div>
+                                        <div id="lyte_ZsIC5z_q1W8"
+                                             data-src="https://i.ytimg.com/vi/ZsIC5z_q1W8/maxresdefault.jpg" class="pL">
+                                            <div class="tC">
+                                                <div class="tT" itemprop="name">Rise of Kingdoms Trailer</div>
+                                            </div>
+                                            <div class="play"></div>
+                                            <div class="ctrl">
+                                                <div class="Lctrl"></div>
+                                                <div class="Rctrl"></div>
+                                            </div>
+                                        </div>
+                                        <noscript><a href="https://youtu.be/ZsIC5z_q1W8" data-wpel-link="external"
+                                                     target="_blank" rel="nofollow external noopener noreferrer"><img
+                                            src=https://i.ytimg.com/vi/ZsIC5z_q1W8/0.jpg alt="Rise of Kingdoms Trailer"
+                                            width=640 height=340><br>Watch this video on YouTube</a></noscript>
+                                        <meta itemprop="description"
+                                              content="Rise of Kingdoms is a mobile MMO real-time epic strategy game inspired by history. Get it on Google Play ► https://play.google.com/store/apps/details?id=com.lilithgame.roc.gp Get it on the App Store ► https://itunes.apple.com/app/id1354260888 Facebook: https://www.facebook.com/riseofkingdomsgame/ In Rise of Kingdoms, you’ll find a seamless and highly detailed world map, with 11 civilizations and more than 20 historical heroes to choose from. Each has specialty troops and buildings with unique upgrades. You’ll also research technologies from various eras, join alliances, and manage the growth of your cities. Lead your civilization to glory!">
+                                    </div>
+                                </div>
+                                <div class="lL" style="max-width:100%;width:640px;margin:5px auto;"></div>
+                                <p></p>
+                                <div class="wps-shortcode-wrapper wps-accordion wps-accordion-standard "
+                                     id="wps-accordion">
+                                    <div class="wps-panel wps-panel-icon-caret is-open">
+                                        <div class="wps-panel-title">
+                                            <span class="wps-panel-icon"></span>
+                                            Game Review
+                                        </div>
+                                        <div class="wps-panel-content"><p></p>
+                                            <p><strong>The pros:</strong></p>
+                                            <ul>
+                                                <li>A ton of options</li>
+                                                <li>Massive world</li>
+                                                <li>Amazing online modes</li>
+                                            </ul>
+                                            <p><strong>The cons:</strong></p>
+                                            <ul>
+                                                <li>Lack of originality</li>
+                                                <li>The presentation seems a bit basic</li>
+                                            </ul>
+                                            <p>You must have a feel for megalomanic tyrants of the past. They had to
+                                                have the needs of their own people as well as keep tabs on the horizon,
+                                                finding new places to dominate &amp; waiting for the approach of the
+                                                battle flags of the opponents’ army.</p>
+                                            <p>This game, <strong>Rise of Kingdoms</strong>, allows you to go through
+                                                the experience of their plight in real life, &amp; at a scale that we
+                                                have never witnessed on smartphones in the past.</p>
+                                            <p>We would start from the beginning. You begin by selecting to play as 1
+                                                out of the 8 civilizations – Rome, France, Germany, Spain, China,
+                                                Britain, Japan &amp; Korea. After that, you will be offered a little
+                                                piece of land for cultivating in one of your cities.</p>
+                                            <p>At the very center of the City hall of yours, &amp; as you keep leveling
+                                                up your building, you get access to different sorts of buildings, which
+                                                even includes the general collection of stable, farm, academy, barracks,
+                                                lumber mill, archery range, &amp; a lot more. You have the option of
+                                                building roads &amp; planting trees as well.</p>
+                                            <p>All these buildings come with the option of upgrading, and such upgrades
+                                                do take time, which means you have to queue them up in the hut of the
+                                                builder. But thanks to the speed up cards, you can skip them. And these
+                                                speed up cards, you need to collect them by buying or playing with gems
+                                                directly.</p>
+                                            <p>This gives more meaning to your traditional five to ten minute gaming
+                                                periods more meaning, as you can do stuff quicker &amp; let larger
+                                                projects take place at the background while you do some other thing.</p>
+                                            <p>You have the option of loading the game, upgrading multiple buildings,
+                                                sending out a couple scouts, training some of your troops, and usually
+                                                ramp up your small city as you wait for your bus to arrive.</p>
+                                            <p>Did you decipher that far? Good. While we haven’t covered the details,
+                                                you get the basic picture of it.</p>
+                                            <p>Do this now, place your 2 fingers on top of the screen &amp; draw them
+                                                together. Do that again. And one more time. Ultimately, you’d zoom out
+                                                as possibly far as you could, at the point where you could make a swipe
+                                                on the screen for surveying your whole kingdom. The majority of it got
+                                                covered inside the fog caused by the war, a small map at the top-right
+                                                corner that indicates the amount of the world that is on the screen.</p>
+                                            <p>Swipe your way towards the corner of the small map &amp; you’d get to one
+                                                more of such small maps. You will find a total of 9 there, each of them
+                                                being 9x larger compared to a completely zoomed-out screen filled with
+                                                stuff.</p>
+                                            <p>‘Rise of Kingdoms’ happens to be massive. Then, it happens to be a huge
+                                                nasty world beyond the walls of your small city. There happen to be
+                                                lands of crops you can harvest, barbarians that you can ambush at
+                                                several extents of hardships, forts of barbarians that you can raid,
+                                                cities of enemies, logging camps, &amp; lots and lots more. Each time
+                                                you employ a scout, you give birth to more of the gameplay.</p>
+                                            <p>In terms of fighting, you have to keep up not the troops of your only,
+                                                but, the RPG commanders as well. For instance, Joan of Arc &amp; Sun
+                                                Tzu. All these come with their personal skill trees. Plus, you are able
+                                                to have plenty of them at the same time, which command the troops at the
+                                                various sections of your map.</p>
+                                            <p>You do not need to fight the entire world on your own. By joining into an
+                                                alliance, you will connect yourself to a complete alliance domain,
+                                                alongside shared liabilities &amp; assets.</p>
+                                            <p>If you are interested, you could help your other alliance teams by
+                                                offering donations or troops. You could also seek help, for things like
+                                                pacing up your research and leveling up the procedures. You can also
+                                                give funds to research projects of alliance level.</p>
+                                            <p>Overall, there are so many things to do in this game that you may end up
+                                                dizzying. From home chores to bloodbaths of war, skirmishes with close
+                                                barbarians to diplomacy with alliances who are far away, from battling
+                                                through military stages to applying buffs, all of that with the help of
+                                                a few taps on your phone screen.</p>
+                                            <p>All these happen at a real-time, continuous open-world situation,
+                                                alongside numerous notifications that inform you about what is going on
+                                                while you are doing something else on your device.</p>
+                                            <p>Gratefully, there happen to be missions, quests, and also regular
+                                                objectives that help you barge forward. You have these available at a
+                                                constant amount, with every one of them awarding you with logs, food,
+                                                currency, and some other resources as well.</p>
+                                            <p>It involves completing researches, bringing on more troops, brushing up
+                                                your horsemanship, &amp; a gazillion of others such tasks, with all them
+                                                being essential for attaining greatness.</p>
+                                            <p>We have been playing the game Rise of Kingdoms for hours on end, yet we
+                                                feel as if we haven’t even touched the surface of it. There are so many
+                                                things stashed inside this game, as a matter of fact, it may turn into
+                                                something fiddly sometimes.</p>
+                                            <p>You have to utilize the zoom feature even within the city for avoiding
+                                                pressing the wrong building mistakenly.</p>
+                                            <p>Similarly, the graphics on this game are very detailed &amp; serviceable.
+                                                However, there is a small room allocated for the characters.</p>
+                                            <p>But who is in need of it? This ain’t a part of this game. It is a superb
+                                                real-time strategic MMO taking place in a map which rolls out on
+                                                hundreds of kilometers (in the virtual world, of course). And, if you’ve
+                                                any sort of dictatorial desires at all, feel free to give this game a
+                                                shot. You can check this game out on the App Store or Google play right
+                                                now.</p>
+                                            <p></p></div>
+                                    </div>
+                                </div>
+                                <p><em>This fansite does not belong to Lilith Games. It is run by the community and for
+                                    the community of the game to provide the best strategy guides</em></p>
+                                <div style="display: none;"
+                                     class="kk-star-ratings kksr-valign-bottom kksr-align-center " data-id="500"
+                                     data-slug="">
+                                    <div class="kksr-stars">
+                                        <div class="kksr-stars-inactive">
+                                            <div class="kksr-star" data-star="1">
+                                                <div class="kksr-icon" style="width: 20px; height: 20px;"></div>
+                                            </div>
+                                            <div class="kksr-star" data-star="2">
+                                                <div class="kksr-icon" style="width: 20px; height: 20px;"></div>
+                                            </div>
+                                            <div class="kksr-star" data-star="3">
+                                                <div class="kksr-icon" style="width: 20px; height: 20px;"></div>
+                                            </div>
+                                            <div class="kksr-star" data-star="4">
+                                                <div class="kksr-icon" style="width: 20px; height: 20px;"></div>
+                                            </div>
+                                            <div class="kksr-star" data-star="5">
+                                                <div class="kksr-icon" style="width: 20px; height: 20px;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="kksr-stars-active" style="width: 102px;">
+                                            <div class="kksr-star">
+                                                <div class="kksr-icon" style="width: 20px; height: 20px;"></div>
+                                            </div>
+                                            <div class="kksr-star">
+                                                <div class="kksr-icon" style="width: 20px; height: 20px;"></div>
+                                            </div>
+                                            <div class="kksr-star">
+                                                <div class="kksr-icon" style="width: 20px; height: 20px;"></div>
+                                            </div>
+                                            <div class="kksr-star">
+                                                <div class="kksr-icon" style="width: 20px; height: 20px;"></div>
+                                            </div>
+                                            <div class="kksr-star">
+                                                <div class="kksr-icon" style="width: 20px; height: 20px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kksr-legend">
+                                        <strong class="kksr-score">4.3</strong>
+                                        <span class="kksr-muted">/</span>
+                                        <strong>5</strong>
+                                        <span class="kksr-muted">(</span>
+                                        <strong class="kksr-count">92</strong>
+                                        <span class="kksr-muted">
+votes </span>
+                                        <span class="kksr-muted">)</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
 <!-- required -->
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script type="text/javascript" src="/rise_of_kingdom/public/js/stellarnav.min.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         jQuery('.stellarnav').stellarNav({
-            theme: 'light',
+            theme: 'plain',
             breakpoint: 960,
             position: 'right',
             showArrows: false,
